@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="YwE-9Z-YFK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Sh6-KH-hlm"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="清屏" id="ya0-22-F7h">
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" id="6TK-bR-xBQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="回退" id="02L-Ju-PXj">
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="z5K-wV-q5C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="橡皮" id="fb4-5J-Q8e">
+                                        <connections>
+                                            <action selector="erase:" destination="BYZ-38-t0r" id="OaO-I8-Nz8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="画笔" id="t65-rW-dII">
+                                        <connections>
+                                            <action selector="brush:" destination="BYZ-38-t0r" id="s03-JY-QLE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="背景" id="Dlr-Sc-PcO">
+                                        <connections>
+                                            <action selector="changeBacColor:" destination="BYZ-38-t0r" id="ipp-b6-7DD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="相册" id="SSX-67-hlp">
+                                        <connections>
+                                            <action selector="album:" destination="BYZ-38-t0r" id="5h8-NX-f8i"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" systemItem="flexibleSpace" id="jnd-2K-E64"/>
+                                    <barButtonItem title="保存" id="ImM-PV-JAi">
+                                        <connections>
+                                            <action selector="save:" destination="BYZ-38-t0r" id="lse-0G-lUC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PW-0J-dy9" customClass="UIStackView">
+                                <rect key="frame" x="10" y="566" width="394" height="160"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="WIV-zc-2vW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cw6-fg-y5q" customClass="RSView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="512"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEb-Lp-8iO">
+                                        <rect key="frame" x="370" y="0.0" width="44" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="AFh-59-4bn"/>
+                                            <constraint firstAttribute="height" constant="44" id="hfj-7z-j7M"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QT-AL-B4G" customClass="LineView">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="6e1-VU-rOx"/>
+                                            <constraint firstAttribute="width" constant="44" id="Bbx-Id-wDi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="aDw-ih-SSi"/>
+                                            <constraint firstAttribute="height" constant="44" id="uiu-wL-qTC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9QT-AL-B4G" firstAttribute="leading" secondItem="Cw6-fg-y5q" secondAttribute="leading" id="2de-Ya-q9O"/>
+                                    <constraint firstItem="nEb-Lp-8iO" firstAttribute="top" secondItem="Cw6-fg-y5q" secondAttribute="top" id="Mlh-7S-0Bl"/>
+                                    <constraint firstAttribute="trailing" secondItem="nEb-Lp-8iO" secondAttribute="trailing" id="Ydd-2o-7Fj"/>
+                                    <constraint firstItem="9QT-AL-B4G" firstAttribute="top" secondItem="Cw6-fg-y5q" secondAttribute="top" id="ZTV-CD-KXf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="Cw6-fg-y5q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3Fc-tc-wh6"/>
+                            <constraint firstItem="9PW-0J-dy9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BGK-cE-r2v"/>
+                            <constraint firstItem="9PW-0J-dy9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="TCC-Bq-Nh3"/>
+                            <constraint firstItem="YwE-9Z-YFK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TdI-S4-IQM"/>
+                            <constraint firstItem="9PW-0J-dy9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="Zzb-cw-xhk"/>
+                            <constraint firstItem="9PW-0J-dy9" firstAttribute="top" secondItem="Cw6-fg-y5q" secondAttribute="bottom" constant="10" id="edR-mg-TbS"/>
+                            <constraint firstItem="Cw6-fg-y5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fLl-Ch-Bot"/>
+                            <constraint firstItem="YwE-9Z-YFK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h1u-An-QtH"/>
+                            <constraint firstItem="Cw6-fg-y5q" firstAttribute="top" secondItem="YwE-9Z-YFK" secondAttribute="bottom" id="i6i-sB-y7E"/>
+                            <constraint firstItem="YwE-9Z-YFK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v3W-Ku-env"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="nEb-Lp-8iO" id="PJO-tA-F3B"/>
+                        <outlet property="lineView" destination="9QT-AL-B4G" id="2MP-uz-GWB"/>
+                        <outlet property="operateView" destination="9PW-0J-dy9" id="Oxf-7h-R9F"/>
+                        <outlet property="rsView" destination="Cw6-fg-y5q" id="XXb-do-6ms"/>
+                        <outlet property="toolbar" destination="YwE-9Z-YFK" id="2eK-Cz-Lrc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="93.750000000000014"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumViewController">
+            <connections>
+                <outlet property="imageView" destination="165-4U-eUe" id="Zhh-vr-e1f"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="165-4U-eUe">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpD-Y0-YcJ">
+                    <rect key="frame" x="318" y="44" width="80" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="RNN-WR-FMp"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="分享">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="shareBtnDidClick:" destination="-1" eventType="touchUpInside" id="RZg-tx-hXT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czq-ou-v8T">
+                    <rect key="frame" x="202" y="44" width="100" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="07C-1t-ggk"/>
+                        <constraint firstAttribute="width" constant="100" id="CVL-d6-lpN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="删除">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="deleteBtnDidClick:" destination="-1" eventType="touchUpInside" id="eZa-pq-ndY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qpD-Y0-YcJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="0fd-ta-nPu"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="165-4U-eUe" secondAttribute="bottom" id="15f-bo-wKG"/>
+                <constraint firstItem="165-4U-eUe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2ZW-HQ-h9K"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="qpD-Y0-YcJ" secondAttribute="trailing" constant="16" id="CXm-yr-DPJ"/>
+                <constraint firstItem="qpD-Y0-YcJ" firstAttribute="leading" secondItem="Czq-ou-v8T" secondAttribute="trailing" constant="16" id="LMb-Su-jsC"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="165-4U-eUe" secondAttribute="trailing" id="M2T-d7-k4y"/>
+                <constraint firstItem="Czq-ou-v8T" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="MBV-Wy-wTD"/>
+                <constraint firstItem="165-4U-eUe" firstAttribute="top" secondItem="Czq-ou-v8T" secondAttribute="bottom" id="QoK-um-RI6"/>
+                <constraint firstItem="165-4U-eUe" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="R37-7g-7cE"/>
+                <constraint firstItem="165-4U-eUe" firstAttribute="top" secondItem="qpD-Y0-YcJ" secondAttribute="bottom" id="SMO-bo-xZT"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
