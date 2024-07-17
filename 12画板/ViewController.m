@@ -150,10 +150,31 @@
     [self.rsView bacColor];
 }
 
-// 相册
+// 相册javascript:;
 - (IBAction)album:(UIBarButtonItem *)sender {
     [self openAlbum];
 }
+
+- (IBAction)straightLine:(id)sender {
+    [self.rsView straightLine];
+}
+
+- (IBAction)arcLine:(id)sender {
+    [self.rsView arcLine];
+}
+
+- (IBAction)singleArrowLine:(id)sender {
+    [self.rsView singleArrowLine];
+}
+
+- (IBAction)doubleArrowLine:(id)sender {
+    [self.rsView doubleArrowLine];
+}
+
+- (IBAction)empty:(id)sender {
+    [self.rsView emptyLine];
+}
+
 
 - (void)updateColorSlider: (UIColor *)color {
     CGColorRef cgColor = [color CGColor];

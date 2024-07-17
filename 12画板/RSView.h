@@ -31,6 +31,12 @@ typedef enum : NSUInteger {
 - (void)erase;
 - (void)save;
 - (void)brush;
+
+- (void)straightLine;
+- (void)arcLine;
+- (void)singleArrowLine;
+- (void)doubleArrowLine;
+- (void)emptyLine;
 @end
 
 NS_ASSUME_NONNULL_END
